@@ -1,0 +1,3 @@
+#!/bin/bash
+nohup python3 ../readsensors/read_sensors.py %> read_sensors.out &
+
