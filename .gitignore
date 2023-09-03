@@ -1,5 +1,6 @@
 *.csv
 *.out
+*.pid
 
 node_modules
 

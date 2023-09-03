@@ -1,6 +1,7 @@
 const path = require('path')
 const express = require('express')
-var cors = require('cors');
+const serveIndex = require('serve-index')
+const cors = require('cors');
 const app = express()
 const port = 3000
 
@@ -10,7 +11,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use('/data', express.static(path.join(__dirname, '..', 'data')))
+const dataDir = path.join(__dirname, '..', 'data');
+
+app.use('/data', express.static(dataDir), serveIndex(dataDir, { 'icons': true }))
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
