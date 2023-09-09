@@ -2,6 +2,8 @@
 *.out
 *.pid
 
+data/*.json
+
 node_modules
 
 # Byte-compiled / optimized / DLL files
