@@ -46,7 +46,7 @@ while True:
         write_current_readings(temperature, relative_humidity, moisture_0.value)
 
         time.sleep(5 * 60)
-    except RuntimeError as e:
+    except OSError as e:
         print(e)
         print("re-initialising\n", flush=True)
         needs_init=True
